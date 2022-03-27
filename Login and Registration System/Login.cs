@@ -13,6 +13,7 @@ namespace Login_and_Registration_System
 {
     public partial class Login : Form
     {
+        private SqlDataReader dr;
         public Login()
         {
             InitializeComponent();
@@ -37,7 +38,23 @@ namespace Login_and_Registration_System
             {
                 SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Coding\Login and Registration System\Login and Registration System\Database.mdf';Integrated Security=True");
                 con.Open();
-                SqlCommand com = new SqlCommand("select * from LoginTable where username ='" + userText.Text + "' and password ='" + passwordText.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from LoginTable where username ='" + userText.Text + "' and password ='" + passwordText.Text + "'", con);
+                dr = cmd.ExecuteReader();
+                if(dr.Read())
+                {
+                    dr.Close();
+                    this.Hide();
+                    Home home = new Home();
+                    home.ShowDialog();
+                } else
+                {
+                    dr.Close();
+                    MessageBox.Show("No account available with this username and password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+            else
+            {
+                MessageBox.Show("Please enter values in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

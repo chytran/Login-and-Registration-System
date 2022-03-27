@@ -28,63 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userNameTxt = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.passwordText = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.confirmPassword = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.user = new System.Windows.Forms.Label();
+            this.userNameTxt = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.Label();
+            this.passwordText = new System.Windows.Forms.TextBox();
+            this.confirm = new System.Windows.Forms.Label();
+            this.confirmPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // user
+            // 
+            this.user.AutoSize = true;
+            this.user.Location = new System.Drawing.Point(237, 64);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(88, 13);
+            this.user.TabIndex = 0;
+            this.user.Text = "Enter User Name";
+            // 
             // userNameTxt
             // 
-            this.userNameTxt.AutoSize = true;
-            this.userNameTxt.Location = new System.Drawing.Point(237, 64);
+            this.userNameTxt.Location = new System.Drawing.Point(365, 61);
             this.userNameTxt.Name = "userNameTxt";
-            this.userNameTxt.Size = new System.Drawing.Size(88, 13);
-            this.userNameTxt.TabIndex = 0;
-            this.userNameTxt.Text = "Enter User Name";
+            this.userNameTxt.Size = new System.Drawing.Size(155, 20);
+            this.userNameTxt.TabIndex = 1;
             // 
-            // textBox1
+            // password
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 1;
+            this.password.AutoSize = true;
+            this.password.Location = new System.Drawing.Point(237, 107);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(81, 13);
+            this.password.TabIndex = 0;
+            this.password.Text = "Enter Password";
             // 
             // passwordText
             // 
-            this.passwordText.AutoSize = true;
-            this.passwordText.Location = new System.Drawing.Point(237, 107);
+            this.passwordText.Location = new System.Drawing.Point(365, 104);
             this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(81, 13);
-            this.passwordText.TabIndex = 0;
-            this.passwordText.Text = "Enter Password";
+            this.passwordText.Size = new System.Drawing.Size(155, 20);
+            this.passwordText.TabIndex = 1;
             // 
-            // textBox2
+            // confirm
             // 
-            this.textBox2.Location = new System.Drawing.Point(365, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 20);
-            this.textBox2.TabIndex = 1;
+            this.confirm.AutoSize = true;
+            this.confirm.Location = new System.Drawing.Point(237, 161);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(91, 13);
+            this.confirm.TabIndex = 0;
+            this.confirm.Text = "Confirm Password";
             // 
             // confirmPassword
             // 
-            this.confirmPassword.AutoSize = true;
-            this.confirmPassword.Location = new System.Drawing.Point(237, 161);
+            this.confirmPassword.Location = new System.Drawing.Point(365, 158);
             this.confirmPassword.Name = "confirmPassword";
-            this.confirmPassword.Size = new System.Drawing.Size(91, 13);
-            this.confirmPassword.TabIndex = 0;
-            this.confirmPassword.Text = "Confirm Password";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(365, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 20);
-            this.textBox3.TabIndex = 1;
+            this.confirmPassword.Size = new System.Drawing.Size(155, 20);
+            this.confirmPassword.TabIndex = 1;
             // 
             // button1
             // 
@@ -113,12 +113,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.confirmPassword);
             this.Controls.Add(this.passwordText);
             this.Controls.Add(this.userNameTxt);
+            this.Controls.Add(this.confirm);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.user);
             this.Name = "Registration";
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.Registration_Load);
@@ -129,12 +129,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label userNameTxt;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label passwordText;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label confirmPassword;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label user;
+        private System.Windows.Forms.TextBox userNameTxt;
+        private System.Windows.Forms.Label password;
+        private System.Windows.Forms.TextBox passwordText;
+        private System.Windows.Forms.Label confirm;
+        private System.Windows.Forms.TextBox confirmPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

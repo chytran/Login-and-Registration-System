@@ -30,8 +30,8 @@ namespace Login_and_Registration_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            // Login login = new Login();
-            //login.ShowDialog();
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
